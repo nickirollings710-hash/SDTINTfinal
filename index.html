@@ -3,13 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SDTINT | Premium Automotive Aesthetics</title>
+    <title>SDTINT | Future of Automotive Aesthetics & Privacy</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="SDTINT | Premium Window Tinting & Privacy Solutions">
+    <meta name="description" content="San Diego's premier window tinting studio. Featuring nano-ceramic technology, precision computer-cut patterns, and AI-powered consultations for automotive, residential, and commercial applications.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sdtint.com/">
+    <meta property="og:title" content="SDTINT | Future of Automotive Aesthetics">
+    <meta property="og:description" content="Experience the next generation of window tinting with SDTINT's immersive glassmorphic interface and AI-driven precision.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sdtint.com/">
+    <meta property="twitter:title" content="SDTINT | Future of Automotive Aesthetics">
+    <meta property="twitter:description" content="San Diego's premier window tinting studio featuring AI-powered consultations.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=1200&auto=format&fit=crop">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://images.unsplash.com">
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    
     <script>
       tailwind.config = {
         theme: {
@@ -39,22 +60,26 @@
         color: white;
         overflow-x: hidden;
       }
-      /* Hide scrollbar for immersive feel */
+      /* Custom Scrollbar for Premium Feel */
       ::-webkit-scrollbar {
-        width: 8px;
+        width: 6px;
       }
       ::-webkit-scrollbar-track {
         background: #050505;
       }
       ::-webkit-scrollbar-thumb {
-        background: #333;
-        border-radius: 4px;
+        background: #222;
+        border-radius: 10px;
+        transition: background 0.3s ease;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00f3ff;
       }
       .glass-panel {
         background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
       }
       .text-outline {
         color: transparent;
@@ -63,6 +88,8 @@
       .clip-diagonal {
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
       }
+      /* Prevents FOUC (Flash of Unstyled Content) */
+      [v-cloak] { display: none; }
     </style>
   <script type="importmap">
 {
