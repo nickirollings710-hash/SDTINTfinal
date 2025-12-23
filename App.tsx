@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import Hero from './components/Hero';
 import Navigation from './components/Navigation';
 import ServiceCard from './components/ServiceCard';
+import TintAI from './components/TintAI';
 import { Twitter, Instagram, Linkedin, MapPin, Phone, Mail, Loader2 } from 'lucide-react';
 
 // Lazy load heavy interactive components
@@ -40,6 +41,11 @@ function App() {
       <Suspense fallback={<div className="h-screen w-full flex items-center justify-center bg-brand-black"><Loader2 className="animate-spin text-brand-neon" /></div>}>
         <HorizontalScroll />
       </Suspense>
+
+      {/* AI Consultant Section - NEW INTEGRATION */}
+      <div id="consultant">
+        <TintAI />
+      </div>
 
       {/* Services Section */}
       <section id="services" className="py-32 px-6 relative">

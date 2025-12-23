@@ -14,7 +14,12 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = ['Automotive', 'Residential', 'Commercial'];
+  const navItems = [
+    { name: 'Automotive', href: '#automotive' },
+    { name: 'Residential', href: '#residential' },
+    { name: 'Commercial', href: '#commercial' },
+    { name: 'AI Consultant', href: '#consultant' }
+  ];
 
   return (
     <nav 
@@ -45,11 +50,11 @@ const Navigation: React.FC = () => {
         <div className="hidden md:flex items-center gap-10">
           {navItems.map((item) => (
             <a 
-              key={item} 
-              href={`#${item.toLowerCase()}`}
-              className="font-sans text-xs font-semibold tracking-[0.2em] uppercase text-gray-400 hover:text-brand-neon transition-colors duration-300 relative group"
+              key={item.name} 
+              href={item.href}
+              className={`font-sans text-xs font-semibold tracking-[0.2em] uppercase transition-colors duration-300 relative group ${item.name === 'AI Consultant' ? 'text-brand-neon' : 'text-gray-400 hover:text-brand-neon'}`}
             >
-              {item}
+              {item.name}
               <span className="absolute -bottom-1.5 left-0 w-0 h-[1px] bg-brand-neon transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
@@ -79,12 +84,12 @@ const Navigation: React.FC = () => {
           >
              {navItems.map((item) => (
               <a 
-                key={item} 
-                href={`#${item.toLowerCase()}`}
+                key={item.name} 
+                href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="font-display text-3xl font-black text-white hover:text-brand-neon transition-colors tracking-tighter"
+                className={`font-display text-3xl font-black transition-colors tracking-tighter ${item.name === 'AI Consultant' ? 'text-brand-neon' : 'text-white hover:text-brand-neon'}`}
               >
-                {item.toUpperCase()}
+                {item.name.toUpperCase()}
               </a>
             ))}
             <button className="mt-8 px-10 py-4 bg-brand-neon text-black font-display font-bold text-xs uppercase tracking-[0.2em]">
