@@ -6,7 +6,6 @@ import { Twitter, Instagram, Linkedin, MapPin, Phone, Mail, Loader2 } from 'luci
 
 // Lazy load heavy interactive components
 const HorizontalScroll = React.lazy(() => import('./components/HorizontalScroll'));
-const TintAI = React.lazy(() => import('./components/TintAI'));
 
 function App() {
   const services = [
@@ -63,11 +62,6 @@ function App() {
             </div>
          </div>
       </section>
-
-      {/* AI Consultant Section - Lazy Loaded */}
-      <Suspense fallback={<div className="py-24 flex items-center justify-center"><Loader2 className="animate-spin text-brand-neon" /></div>}>
-        <TintAI />
-      </Suspense>
 
       {/* Footer */}
       <footer className="bg-black py-20 border-t border-white/10">

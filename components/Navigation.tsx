@@ -14,6 +14,8 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navItems = ['Automotive', 'Residential', 'Commercial'];
+
   return (
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
@@ -41,10 +43,10 @@ const Navigation: React.FC = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-10">
-          {['Automotive', 'Residential', 'Commercial', 'Consultant'].map((item) => (
+          {navItems.map((item) => (
             <a 
               key={item} 
-              href={item === 'Consultant' ? '#ai-consultant' : `#${item.toLowerCase()}`}
+              href={`#${item.toLowerCase()}`}
               className="font-sans text-xs font-semibold tracking-[0.2em] uppercase text-gray-400 hover:text-brand-neon transition-colors duration-300 relative group"
             >
               {item}
@@ -75,10 +77,10 @@ const Navigation: React.FC = () => {
             exit={{ opacity: 0, y: -20 }}
             className="fixed inset-0 bg-black/98 backdrop-blur-2xl z-40 flex flex-col items-center justify-center gap-8 md:hidden"
           >
-             {['Automotive', 'Residential', 'Commercial', 'Consultant'].map((item) => (
+             {navItems.map((item) => (
               <a 
                 key={item} 
-                href={item === 'Consultant' ? '#ai-consultant' : `#${item.toLowerCase()}`}
+                href={`#${item.toLowerCase()}`}
                 onClick={() => setMobileMenuOpen(false)}
                 className="font-display text-3xl font-black text-white hover:text-brand-neon transition-colors tracking-tighter"
               >
