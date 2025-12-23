@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
@@ -16,17 +17,9 @@
     <meta property="og:description" content="Experience the next generation of window tinting with SDTINT's immersive glassmorphic interface and AI-driven precision.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=1200&auto=format&fit=crop">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sdtint.com/">
-    <meta property="twitter:title" content="SDTINT | Future of Automotive Aesthetics">
-    <meta property="twitter:description" content="San Diego's premier window tinting studio featuring AI-powered consultations.">
-    <meta property="twitter:image" content="https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=1200&auto=format&fit=crop">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://images.unsplash.com">
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
@@ -60,7 +53,6 @@
         color: white;
         overflow-x: hidden;
       }
-      /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 6px;
       }
@@ -86,26 +78,25 @@
         -webkit-text-stroke: 1px rgba(255,255,255,0.3);
       }
     </style>
-    <script type="importmap">
+  <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
+    "gsap": "https://esm.sh/gsap@^3.14.2",
+    "gsap/": "https://esm.sh/gsap@^3.14.2/",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "vite": "https://esm.sh/vite@^7.3.0",
     "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
-    "gsap": "https://esm.sh/gsap@3.12.5",
-    "gsap/ScrollTrigger": "https://esm.sh/gsap@3.12.5/ScrollTrigger",
-    "gsap/CustomEase": "https://esm.sh/gsap@3.12.5/CustomEase",
-    "gsap/": "https://esm.sh/gsap@^3.14.2/"
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
   }
 }
 </script>
-  </head>
+</head>
   <body>
     <div id="root"></div>
-    <!-- Entry point for the application -->
-    <script type="module" src="./index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
